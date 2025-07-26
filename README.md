@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://pomf2.lain.la/f/o0i30x9.png" alt="Banner" width="100%" />
+  <img src="https://github.com/Riflxz/Riflxz/raw/main/banner.png" alt="Banner" width="100%" />
 </p>
 
 <h1 align="center">Hi, I'm <strong>Riflxz</strong> 👋</h1>
