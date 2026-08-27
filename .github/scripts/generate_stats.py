@@ -2,8 +2,8 @@
 """Generate GitHub profile stats SVG from the GitHub API.
 
 Renders two cards:
-  - stats.svg       : total repos, stars, followers, following
-  - top-langs.svg   : top languages by bytes across public repos
+  - stats.svg       : metric grid + top-repos bar chart
+  - tech-stack.svg  : top languages with progress bars
 
 Runs inside GitHub Actions with GITHUB_TOKEN so it never hits the
 unauthenticated rate limit and does not depend on any third-party service.
@@ -13,7 +13,6 @@ import json
 import os
 import sys
 import urllib.request
-import urllib.parse
 
 USERNAME = os.environ.get("GITHUB_USERNAME", "Riflxz")
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
@@ -22,15 +21,19 @@ API = "https://api.github.com"
 OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "profile")
 OUT_DIR = os.path.abspath(OUT_DIR)
 
-# Theme (tokyonight-ish, matches the rest of the profile)
-BG = "#1a1b27"
+# Theme (tokyonight, matches the rest of the profile)
 CARD = "#1f2335"
+CARD_ALT = "#24283b"
 TEXT = "#c0caf5"
-ACCENT = "#7aa2f7"
 MUTED = "#565f89"
+ACCENT = "#7aa2f7"
 GREEN = "#9ece6a"
 YELLOW = "#e0af68"
 RED = "#f7768e"
+PURPLE = "#bb9af7"
+TRACK = "#2f3549"
+
+FONT = "'Segoe UI',Ubuntu,sans-serif"
 
 
 def api(path):
@@ -49,10 +52,7 @@ def esc(text):
 
 
 def rounded_rect(x, y, w, h, r, fill):
-    return (
-        f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{r}" '
-        f'fill="{fill}"/>'
-    )
+    return f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{r}" fill="{fill}"/>'
 
 
 def stat_card():
@@ -65,41 +65,76 @@ def stat_card():
     following = user.get("following", 0)
     public_repos = user.get("public_repos", 0)
 
-    # Card layout
-    W, H = 480, 180
-    pad = 24
-    row_h = 36
-    x1 = pad
-    x2 = W // 2 + 10
+    # Top repos by stars (exclude forks)
+    top_repos = sorted(
+        [r for r in repos if not r.get("fork")],
+        key=lambda r: r.get("stargazers_count", 0),
+        reverse=True,
+    )[:5]
+    max_stars = max([r.get("stargazers_count", 0) for r in top_repos] + [1])
 
-    rows = [
+    # Layout
+    W = 480
+    metrics = [
         ("Repos", public_repos, ACCENT),
         ("Stars", total_stars, YELLOW),
+        ("Forks", total_forks, PURPLE),
         ("Followers", followers, GREEN),
-        ("Following", following, RED),
     ]
+
+    # Metric grid: 4 cells in a row
+    cell_w = (W - 48) / 4
+    metric_h = 64
+    chart_top = 96
+    chart_h = 24 + len(top_repos) * 26
+    H = chart_top + chart_h + 16
 
     svg = []
     svg.append(
         f'<svg width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
         f'fill="none" xmlns="http://www.w3.org/2000/svg">'
     )
-    svg.append(f"<style>.t{{font:600 14px 'Segoe UI',Ubuntu,sans-serif;fill:{TEXT}}}"
-               f".l{{font:600 12px 'Segoe UI',Ubuntu,sans-serif;fill:{MUTED}}}"
-               f".v{{font:700 16px 'Segoe UI',Ubuntu,sans-serif}}</style>")
-    svg.append(rounded_rect(0.5, 0.5, W - 1, H - 1, 8, CARD))
-    svg.append(f'<text x="{pad}" y="34" class="t">GitHub Stats</text>')
+    svg.append(
+        f"<style>"
+        f".t{{font:700 15px {FONT};fill:{TEXT}}}"
+        f".m{{font:700 22px {FONT}}}"
+        f".ml{{font:600 11px {FONT};fill:{MUTED}}}"
+        f".r{{font:600 12px {FONT};fill:{TEXT}}}"
+        f".rs{{font:600 12px {FONT};fill:{YELLOW}}}"
+        f"</style>"
+    )
+    svg.append(rounded_rect(0.5, 0.5, W - 1, H - 1, 12, CARD))
 
-    # Two columns of label/value pairs
-    for i, (label, value, color) in enumerate(rows):
-        col = i % 2
-        row = i // 2
-        x = x1 if col == 0 else x2
-        y = 64 + row * row_h
-        svg.append(f'<text x="{x}" y="{y}" class="l">{esc(label)}</text>')
+    # Header
+    svg.append(f'<text x="24" y="34" class="t">GitHub Stats</text>')
+
+    # Metric cells
+    for i, (label, value, color) in enumerate(metrics):
+        x = 24 + i * cell_w
+        svg.append(rounded_rect(x, 48, cell_w - 8, metric_h, 8, CARD_ALT))
+        svg.append(f'<text x="{x + 12}" y="{metric_h + 48 - 16}" class="ml">{esc(label)}</text>')
         svg.append(
-            f'<text x="{x}" y="{y + 22}" class="v" fill="{color}">{value}</text>'
+            f'<text x="{x + 12}" y="{metric_h + 48 - 34}" class="m" fill="{color}">{value}</text>'
         )
+
+    # Chart header
+    svg.append(f'<text x="24" y="{chart_top + 18}" class="t">Top Repos</text>')
+
+    # Bar chart
+    y = chart_top + 40
+    bar_max_w = W - 48 - 60
+    for repo in top_repos:
+        name = repo["name"]
+        stars = repo.get("stargazers_count", 0)
+        bar_w = (bar_max_w * stars / max_stars) if max_stars else 0
+        svg.append(f'<text x="24" y="{y}" class="r">{esc(name)}</text>')
+        svg.append(
+            f'<text x="{W - 24}" y="{y}" class="rs" text-anchor="end">★ {stars}</text>'
+        )
+        svg.append(rounded_rect(24, y + 6, bar_max_w, 6, 3, TRACK))
+        if bar_w > 0:
+            svg.append(rounded_rect(24, y + 6, bar_w, 6, 3, ACCENT))
+        y += 26
 
     svg.append("</svg>")
     return "".join(svg)
@@ -134,34 +169,39 @@ def lang_card():
         "Rust": "#dea584",
     }
 
-    W, H = 300, 46 + len(top) * 30
+    W = 300
+    H = 46 + len(top) * 32
     svg = []
     svg.append(
         f'<svg width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
         f'fill="none" xmlns="http://www.w3.org/2000/svg">'
     )
-    svg.append(f"<style>.t{{font:600 14px 'Segoe UI',Ubuntu,sans-serif;fill:{TEXT}}}"
-               f".l{{font:600 13px 'Segoe UI',Ubuntu,sans-serif;fill:{TEXT}}}"
-               f".p{{font:600 12px 'Segoe UI',Ubuntu,sans-serif;fill:{MUTED}}}</style>")
-    svg.append(rounded_rect(0.5, 0.5, W - 1, H - 1, 8, CARD))
+    svg.append(
+        f"<style>"
+        f".t{{font:700 15px {FONT};fill:{TEXT}}}"
+        f".l{{font:600 13px {FONT};fill:{TEXT}}}"
+        f".p{{font:600 12px {FONT};fill:{MUTED}}}"
+        f"</style>"
+    )
+    svg.append(rounded_rect(0.5, 0.5, W - 1, H - 1, 12, CARD))
     svg.append(f'<text x="24" y="30" class="t">Tech Stack</text>')
 
-    y = 56
+    y = 58
+    bar_max_w = W - 48
     for lang, size in top:
         pct = size / total * 100
         color = colors.get(lang, "#8b949e")
-        bar_w = (W - 48) * (pct / 100)
+        bar_w = bar_max_w * (pct / 100)
         svg.append(f'<circle cx="24" cy="{y - 4}" r="5" fill="{color}"/>')
         svg.append(f'<text x="36" y="{y}" class="l">{esc(lang)}</text>')
         svg.append(
             f'<text x="{W - 24}" y="{y}" class="p" text-anchor="end">'
             f'{pct:.1f}%</text>'
         )
-        svg.append(
-            f'<rect x="36" y="{y + 8}" width="{bar_w:.1f}" height="4" '
-            f'rx="2" fill="{color}"/>'
-        )
-        y += 30
+        svg.append(rounded_rect(36, y + 8, bar_max_w, 6, 3, TRACK))
+        if bar_w > 0:
+            svg.append(rounded_rect(36, y + 8, bar_w, 6, 3, color))
+        y += 32
 
     svg.append("</svg>")
     return "".join(svg)
