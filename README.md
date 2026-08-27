@@ -39,22 +39,11 @@
 
 **Project**
 
-**[YuukiBot](https://github.com/Riflxz/YuukiBot)** — bot WhatsApp base Golang. Multi-fitur: pencarian media, konversi file, edit gambar/video, sticker AI, AI chat, broadcast JPM, dan panggilan audio/video dengan multi-sender. Dijalankan sebagai binary tunggal.
-![stars](https://img.shields.io/github/stars/Riflxz/YuukiBot?style=flat-square&label=Stars&color=gold)
-![forks](https://img.shields.io/github/forks/Riflxz/YuukiBot?style=flat-square&label=Forks&color=blue)
-
-- [GitForge](https://github.com/Riflxz/GitForge) — aplikasi desktop GUI untuk mengelola repository GitHub: create, upload, clone, branch, tag, release, dan topics.
-  ![stars](https://img.shields.io/github/stars/Riflxz/GitForge?style=flat-square&label=Stars&color=gold)
-  ![forks](https://img.shields.io/github/forks/Riflxz/GitForge?style=flat-square&label=Forks&color=blue)
-- [mcp-council-server](https://github.com/Riflxz/mcp-council-server) — MCP server yang memberi memory, state, dan reasoning scaffolding untuk AI menyelesaikan masalah kompleks lewat 5 fase, tanpa panggilan LLM internal.
-  ![stars](https://img.shields.io/github/stars/Riflxz/mcp-council-server?style=flat-square&label=Stars&color=gold)
-  ![forks](https://img.shields.io/github/forks/Riflxz/mcp-council-server?style=flat-square&label=Forks&color=blue)
-- [agentrouter-opencode](https://github.com/Riflxz/agentrouter-opencode) — setup otomatis agentrouter untuk opencode.
-  ![stars](https://img.shields.io/github/stars/Riflxz/agentrouter-opencode?style=flat-square&label=Stars&color=gold)
-  ![forks](https://img.shields.io/github/forks/Riflxz/agentrouter-opencode?style=flat-square&label=Forks&color=blue)
-- [Atomic-Acrch-scanner](https://github.com/Riflxz/Atomic-Acrch-scanner) — scanner malware untuk AUR (Arch User Repository).
-  ![stars](https://img.shields.io/github/stars/Riflxz/Atomic-Acrch-scanner?style=flat-square&label=Stars&color=gold)
-  ![forks](https://img.shields.io/github/forks/Riflxz/Atomic-Acrch-scanner?style=flat-square&label=Forks&color=blue)
+- **[YuukiBot](https://github.com/Riflxz/YuukiBot)** — bot WhatsApp base Golang. Multi-fitur: pencarian media, konversi file, edit gambar/video, sticker AI, AI chat, broadcast JPM, dan panggilan audio/video dengan multi-sender. Dijalankan sebagai binary tunggal. ![stars](https://img.shields.io/github/stars/Riflxz/YuukiBot?style=flat-square&label=Stars&color=gold) ![forks](https://img.shields.io/github/forks/Riflxz/YuukiBot?style=flat-square&label=Forks&color=blue)
+- [GitForge](https://github.com/Riflxz/GitForge) — aplikasi desktop GUI untuk mengelola repository GitHub: create, upload, clone, branch, tag, release, dan topics. ![stars](https://img.shields.io/github/stars/Riflxz/GitForge?style=flat-square&label=Stars&color=gold) ![forks](https://img.shields.io/github/forks/Riflxz/GitForge?style=flat-square&label=Forks&color=blue)
+- [mcp-council-server](https://github.com/Riflxz/mcp-council-server) — MCP server yang memberi memory, state, dan reasoning scaffolding untuk AI menyelesaikan masalah kompleks lewat 5 fase, tanpa panggilan LLM internal. ![stars](https://img.shields.io/github/stars/Riflxz/mcp-council-server?style=flat-square&label=Stars&color=gold) ![forks](https://img.shields.io/github/forks/Riflxz/mcp-council-server?style=flat-square&label=Forks&color=blue)
+- [agentrouter-opencode](https://github.com/Riflxz/agentrouter-opencode) — setup otomatis agentrouter untuk opencode. ![stars](https://img.shields.io/github/stars/Riflxz/agentrouter-opencode?style=flat-square&label=Stars&color=gold) ![forks](https://img.shields.io/github/forks/Riflxz/agentrouter-opencode?style=flat-square&label=Forks&color=blue)
+- [Atomic-Acrch-scanner](https://github.com/Riflxz/Atomic-Acrch-scanner) — scanner malware untuk AUR (Arch User Repository). ![stars](https://img.shields.io/github/stars/Riflxz/Atomic-Acrch-scanner?style=flat-square&label=Stars&color=gold) ![forks](https://img.shields.io/github/forks/Riflxz/Atomic-Acrch-scanner?style=flat-square&label=Forks&color=blue)
 
 **Fork**
 

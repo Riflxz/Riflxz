@@ -1,0 +1,6 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Council MCP session files (not part of the profile)
+data/
