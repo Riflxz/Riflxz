@@ -1,75 +1,84 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Riflxz/Riflxz/main/banner.jpg" alt="Profile Banner" width="100%" />
+  <img src="https://raw.githubusercontent.com/Riflxz/Riflxz/main/banner.jpg" alt="Banner profil Riflxz" width="100%" />
 </p>
 
-<h1 align="center">Hi, I'm Riflxz 👋</h1>
+<h1 align="center">Riflxz</h1>
 
 <p align="center">
-  A Software Developer and Linux enthusiast from Indonesia.
-  <br />
-  I specialize in building desktop GUI apps and automation tools with Python, and I'm passionate about open-source.
+  Developer dari Indonesia. Bikin bot WhatsApp base Golang, tools otomasi, dan aplikasi desktop.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Go">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Shell-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="Shell">
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux">
 </p>
 
 ---
 
-### About Me
+## Tentang
 
-I am a developer who thrives on creating practical and efficient tools. My work primarily revolves around the command line, where I craft automation scripts and CLI applications using **Python**. I am also actively exploring the field of **cybersecurity** to deepen my understanding of penetration testing and security principles. I am committed to writing clean, maintainable code and contributing to the open-source community.
-
----
-
-### Projects
-
-<table>
-  <tr>
-    <td valign="top" width="50%">
-      <strong>🔧 GitForge</strong>
-      <br><br>
-      A cross-platform desktop GUI for managing GitHub repositories. Create, upload, clone, branch, and manage tags, releases, and topics — all from a beautiful dark-themed interface.
-      <br><br>
-      <a href="https://github.com/Riflxz/GitForge">→ View on GitHub</a>
-    </td>
-    <td valign="top" width="50%">
-      <strong>🚀 More projects coming soon...</strong>
-      <br><br>
-      Stay tuned for more open-source tools and utilities.
-    </td>
-  </tr>
-</table>
+Sebagian besar waktu saya habiskan di terminal. Saya bikin bot WhatsApp base Golang pakai [whatsmeow](https://github.com/tulir/whatsmeow), tools otomasi, dan aplikasi desktop dengan Python. Kadang-kadang saya juga ngulik keamanan siber. Semua project saya open source.
 
 ---
 
-### My Tech Stack
+## Project
 
-<table>
-  <tr>
-    <td valign="top" width="50%">
-      <strong>Languages:</strong>
-      <br><br>
-      <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-      <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="Bash">
-    </td>
-    <td valign="top" width="50%">
-      <strong>Tools & Platforms:</strong>
-      <br><br>
-      <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux">
-      <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git">
-      <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
-      <img src="https://img.shields.io/badge/Flet-00897B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flet">
-      <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="VS Code">
-    </td>
-  </tr>
-</table>
+### [YuukiBot](https://github.com/Riflxz/YuukiBot) — bot WhatsApp base Golang
+
+Bot WhatsApp multi-fitur berbasis Go: pencarian media, konversi file, edit gambar/video, sticker AI, AI chat, broadcast JPM, tools, dan panggilan audio/video dengan multi-sender. Dijalankan sebagai binary tunggal. Cocok dipakai sebagai base bot WhatsApp.
+
+### [GitForge](https://github.com/Riflxz/GitForge)
+
+Aplikasi desktop GUI untuk mengelola repository GitHub — create, upload, clone, branch, tag, release, dan topics.
+
+### [mcp-council-server](https://github.com/Riflxz/mcp-council-server)
+
+MCP server yang memberi memory, state, dan reasoning scaffolding untuk AI menyelesaikan masalah kompleks lewat 5 fase, tanpa panggilan LLM internal.
+
+### [agentrouter-opencode](https://github.com/Riflxz/agentrouter-opencode)
+
+Setup otomatis agentrouter untuk opencode.
+
+### [Atomic-Acrch-scanner](https://github.com/Riflxz/Atomic-Acrch-scanner)
+
+Scanner malware untuk AUR (Arch User Repository).
+
+### [github-readme-stats](https://github.com/Riflxz/github-readme-stats)
+
+Fork dari generator statistik README GitHub.
 
 ---
 
-### GitHub Stats
+## Sedang Dikerjakan
+
+**Bot Vercel** — bot yang di-deploy ke Vercel. Masih rencana, belum ada detail.
+
+---
+
+## Kontak
+
+- [WhatsApp Channel](https://whatsapp.com/channel/0029Vb7tUzP9xVJiGkFNVc3q) — update project dan bot
+- [Lynk.id](https://lynk.id/riflx) — link dan info lainnya
+- [mtzhacie.my.id](https://mtzhacie.my.id) — website pribadi
+- [porto.mtcommunty.web.id](https://porto.mtcommunty.web.id) — portofolio
+
+---
+
+## Tech Stack
+
+Go, Python, Shell/Bash, JavaScript/TypeScript, Node.js, Next.js. Linux, Git, GitHub, Flet, VS Code.
+
+---
+
+## Stats
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Riflxz/Riflxz/main/.github/profile/stats.svg" width="49%" />
-  <img src="https://streak-stats.demolab.com/?user=Riflxz&theme=tokyonight&hide_border=true" width="49%" />
+  <img src="https://raw.githubusercontent.com/Riflxz/Riflxz/main/.github/profile/stats.svg" alt="Statistik GitHub Riflxz" width="49%" />
+  <img src="https://streak-stats.demolab.com/?user=Riflxz&theme=tokyonight&hide_border=true" alt="GitHub streak" width="49%" />
   <br>
-  <img src="https://raw.githubusercontent.com/Riflxz/Riflxz/main/.github/profile/top-langs.svg" width="49%" />
+  <img src="https://raw.githubusercontent.com/Riflxz/Riflxz/main/.github/profile/top-langs.svg" alt="Bahasa yang paling sering dipakai" width="49%" />
 </p>
 
 ---
