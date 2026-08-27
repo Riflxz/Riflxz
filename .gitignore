@@ -1,6 +1,25 @@
-# Python
-__pycache__/
-*.py[cod]
+# build & runtime — JANGAN di-commit
+yamzzbot
+yamzzbot_new
+*.exe
 
-# Council MCP session files (not part of the profile)
+# session WhatsApp = KREDENSIAL LOGIN — WAJIB rahasia
+*.db
+*.db-shm
+*.db-wal
+session.txt
+
+# runtime junk
+temp/
+/diag/
+*.log
+*.output
+*.zip
+
+# artifact tool (council session) — tidak dipakai bot
 data/
+
+# editor / os
+.claude/
+.DS_Store
+__pycache__/
