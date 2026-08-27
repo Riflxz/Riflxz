@@ -1,15 +1,1 @@
-
-    <svg width="576.5"  height="120" viewBox="0 0 576.5 120" fill="#1a1b27" xmlns="http://www.w3.org/2000/svg">
-    <style>
-    .text { font: 600 16px 'Segoe UI', Ubuntu, Sans-Serif; fill: #70a5fd }
-    .small { font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #38bdae }
-    .gray { fill: #858585 }
-    </style>
-    <rect x="0.5" y="0.5" width="575.5" height="99%" rx="4.5" fill="#1a1b27" stroke="#e4e2e2"/>
-    <text x="25" y="45" class="text">Something went wrong! file an issue at https://tiny.one/readme-stats</text>
-    <text data-testid="message" x="25" y="55" class="text small">
-      <tspan x="25" dy="18">Resource not accessible by integration</tspan>
-      <tspan x="25" dy="18" class="gray">FORBIDDEN</tspan>
-    </text>
-    </svg>
-  
+<svg width="480" height="180" viewBox="0 0 480 180" fill="none" xmlns="http://www.w3.org/2000/svg"><style>.t{font:600 14px 'Segoe UI',Ubuntu,sans-serif;fill:#c0caf5}.l{font:600 12px 'Segoe UI',Ubuntu,sans-serif;fill:#565f89}.v{font:700 16px 'Segoe UI',Ubuntu,sans-serif}</style><rect x="0.5" y="0.5" width="479" height="179" rx="8" fill="#1f2335"/><text x="24" y="34" class="t">GitHub Stats</text><text x="24" y="64" class="l">Repos</text><text x="24" y="86" class="v" fill="#7aa2f7">7</text><text x="250" y="64" class="l">Stars</text><text x="250" y="86" class="v" fill="#e0af68">6</text><text x="24" y="100" class="l">Followers</text><text x="24" y="122" class="v" fill="#9ece6a">1</text><text x="250" y="100" class="l">Following</text><text x="250" y="122" class="v" fill="#f7768e">0</text></svg>

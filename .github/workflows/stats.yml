@@ -14,21 +14,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate stats card
-        uses: soulteary/github-readme-stats-action@v1.0.0
-        with:
-          card: stats
-          options: username=Riflxz&theme=tokyonight&show_icons=true&hide_border=true&rank_icon=github&cache_seconds=21600
-          path: .github/profile/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Generate top-langs card
-        uses: soulteary/github-readme-stats-action@v1.0.0
-        with:
-          card: top-langs
-          options: username=Riflxz&theme=tokyonight&layout=compact&hide_border=true&cache_seconds=21600
-          path: .github/profile/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Generate stats cards
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: Riflxz
+        run: python3 .github/scripts/generate_stats.py
 
       - name: Commit cards
         run: |

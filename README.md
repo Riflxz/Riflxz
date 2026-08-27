@@ -1,11 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Riflxz/Riflxz/main/banner.jpg" alt="Banner profil Riflxz" width="100%" />
-</p>
-
-<h1 align="center">Halo, saya Riflxz 👋</h1>
-
-<p align="center">
-  Developer dari Indonesia. Bikin bot WhatsApp base Golang, tools otomasi, dan aplikasi desktop.
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Riflxz&fontSize=50&desc=Developer%20Bot%20WhatsApp%20Base%20Golang&descAlignY=70" alt="Riflxz - Developer Bot WhatsApp Base Golang" width="100%" />
 </p>
 
 <p align="center">
@@ -24,30 +18,47 @@
 - 💬 Tanya-tanya soal bot WhatsApp atau Go, bisa lewat [WhatsApp Channel](https://whatsapp.com/channel/0029Vb7tUzP9xVJiGkFNVc3q)
 - ⚡ Semua project saya open source
 
+---
+
 **Tech stack**
 
-<p>
-  <img alt="Go" src="https://img.shields.io/badge/-Go-00ADD8?style=flat-square&logo=go&logoColor=white" />
-  <img alt="Python" src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-  <img alt="TypeScript" src="https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
-  <img alt="Node.js" src="https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=node.js&logoColor=white" />
-  <img alt="Next.js" src="https://img.shields.io/badge/-Next.js-000000?style=flat-square&logo=next.js&logoColor=white" />
-  <img alt="Bash" src="https://img.shields.io/badge/-Bash-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white" />
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Riflxz/Riflxz/main/.github/profile/tech-stack.svg" alt="Tech stack Riflxz" width="49%" />
+</p>
+
+<p align="center">
   <img alt="Linux" src="https://img.shields.io/badge/-Linux-FCC624?style=flat-square&logo=linux&logoColor=black" />
   <img alt="Git" src="https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white" />
+  <img alt="GitHub" src="https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github&logoColor=white" />
   <img alt="Flet" src="https://img.shields.io/badge/-Flet-00897B?style=flat-square&logo=flutter&logoColor=white" />
+  <img alt="VS Code" src="https://img.shields.io/badge/-VS_Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white" />
+  <img alt="whatsmeow" src="https://img.shields.io/badge/-whatsmeow-25D366?style=flat-square&logo=whatsapp&logoColor=white" />
 </p>
 
 ---
 
 **Project**
 
-- **[YuukiBot](https://github.com/Riflxz/YuukiBot)** — bot WhatsApp base Golang. Multi-fitur: pencarian media, konversi file, edit gambar/video, sticker AI, AI chat, broadcast JPM, dan panggilan audio/video dengan multi-sender. Dijalankan sebagai binary tunggal.
-- **[GitForge](https://github.com/Riflxz/GitForge)** — aplikasi desktop GUI untuk mengelola repository GitHub: create, upload, clone, branch, tag, release, dan topics.
-- **[mcp-council-server](https://github.com/Riflxz/mcp-council-server)** — MCP server yang memberi memory, state, dan reasoning scaffolding untuk AI menyelesaikan masalah kompleks lewat 5 fase, tanpa panggilan LLM internal.
-- **[agentrouter-opencode](https://github.com/Riflxz/agentrouter-opencode)** — setup otomatis agentrouter untuk opencode.
-- **[Atomic-Acrch-scanner](https://github.com/Riflxz/Atomic-Acrch-scanner)** — scanner malware untuk AUR (Arch User Repository).
-- **[github-readme-stats](https://github.com/Riflxz/github-readme-stats)** — fork dari generator statistik README GitHub.
+**[YuukiBot](https://github.com/Riflxz/YuukiBot)** — bot WhatsApp base Golang. Multi-fitur: pencarian media, konversi file, edit gambar/video, sticker AI, AI chat, broadcast JPM, dan panggilan audio/video dengan multi-sender. Dijalankan sebagai binary tunggal.
+![stars](https://img.shields.io/github/stars/Riflxz/YuukiBot?style=flat-square&label=Stars&color=gold)
+![forks](https://img.shields.io/github/forks/Riflxz/YuukiBot?style=flat-square&label=Forks&color=blue)
+
+- [GitForge](https://github.com/Riflxz/GitForge) — aplikasi desktop GUI untuk mengelola repository GitHub: create, upload, clone, branch, tag, release, dan topics.
+  ![stars](https://img.shields.io/github/stars/Riflxz/GitForge?style=flat-square&label=Stars&color=gold)
+  ![forks](https://img.shields.io/github/forks/Riflxz/GitForge?style=flat-square&label=Forks&color=blue)
+- [mcp-council-server](https://github.com/Riflxz/mcp-council-server) — MCP server yang memberi memory, state, dan reasoning scaffolding untuk AI menyelesaikan masalah kompleks lewat 5 fase, tanpa panggilan LLM internal.
+  ![stars](https://img.shields.io/github/stars/Riflxz/mcp-council-server?style=flat-square&label=Stars&color=gold)
+  ![forks](https://img.shields.io/github/forks/Riflxz/mcp-council-server?style=flat-square&label=Forks&color=blue)
+- [agentrouter-opencode](https://github.com/Riflxz/agentrouter-opencode) — setup otomatis agentrouter untuk opencode.
+  ![stars](https://img.shields.io/github/stars/Riflxz/agentrouter-opencode?style=flat-square&label=Stars&color=gold)
+  ![forks](https://img.shields.io/github/forks/Riflxz/agentrouter-opencode?style=flat-square&label=Forks&color=blue)
+- [Atomic-Acrch-scanner](https://github.com/Riflxz/Atomic-Acrch-scanner) — scanner malware untuk AUR (Arch User Repository).
+  ![stars](https://img.shields.io/github/stars/Riflxz/Atomic-Acrch-scanner?style=flat-square&label=Stars&color=gold)
+  ![forks](https://img.shields.io/github/forks/Riflxz/Atomic-Acrch-scanner?style=flat-square&label=Forks&color=blue)
+
+**Fork**
+
+- [github-readme-stats](https://github.com/Riflxz/github-readme-stats) — fork dari generator statistik README GitHub.
 
 **Sedang dikerjakan**
 
@@ -59,9 +70,6 @@
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/Riflxz/Riflxz/main/.github/profile/stats.svg" alt="Statistik GitHub Riflxz" width="49%" />
-  <img src="https://streak-stats.demolab.com/?user=Riflxz&theme=tokyonight&hide_border=true" alt="GitHub streak" width="49%" />
-  <br>
-  <img src="https://raw.githubusercontent.com/Riflxz/Riflxz/main/.github/profile/top-langs.svg" alt="Bahasa yang paling sering dipakai" width="49%" />
 </p>
 
 ---
